@@ -1,5 +1,5 @@
 <?php
-class PBW_Product_Categories extends \Elementor\Widget_Base {
+class PBWidgets_Product_Categories extends \Elementor\Widget_Base {
 
 	private function pbw_get_product_categories(): array {
 
@@ -25,7 +25,7 @@ class PBW_Product_Categories extends \Elementor\Widget_Base {
 	}
 
 	public function get_name(): string {
-		return 'PBW_Product_Categories';
+		return 'PBWidgets_Product_Categories';
 	}
 
 	public function get_title(): string {

@@ -18,10 +18,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define( 'PBW_VERSION', '1.0.0' );
-define( 'PBW_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'PBWidgets_VERSION', '1.0.0' );
+define( 'PBWidgets_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-class PBW_Module {
+class PBWidgets_Module {
 
     public function __construct() {
         add_action( 'init', [ $this, 'init' ] );
@@ -43,11 +43,11 @@ class PBW_Module {
 
     public function pbw_register_product_category_elementor_addon( $widgets_manager ) {
         require_once( __DIR__ . '/widget/pbw-product-categories.php' );
-        $widgets_manager->register( new \PBW_Product_Categories() );
+        $widgets_manager->register( new \PBWidgets_Product_Categories() );
     }
 
-    public function pbw_enqueue_widget_styles() {        
-        wp_enqueue_style( 'PBW-product-categories-style', PBW_PLUGIN_URL . 'assets/css/pbw-product-categories.css', [], PBW_VERSION );
+    public function pbw_enqueue_widget_styles() {
+        wp_enqueue_style( 'PBW-product-categories-style', PBWidgets_PLUGIN_URL . 'assets/css/pbw-product-categories.css', [], PBWidgets_VERSION );
     }
 
     public function pbw_elementor_not_found_notice() {
@@ -60,4 +60,4 @@ class PBW_Module {
 }
 
 // Initialize the addon
-new PBW_Module();
+new PBWidgets_Module();
