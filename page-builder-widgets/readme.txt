@@ -1,6 +1,6 @@
 === Page Builder Widgets ===
 Contributors: agreem2016
-Tags: elementor, woocommerce, widget, categories, product category
+Tags: elementor addon, woocommerce product categories, widget, page builder, images
 Tested up to: 6.7
 Stable tag: 1.0.0
 License: GPLv2 or later
