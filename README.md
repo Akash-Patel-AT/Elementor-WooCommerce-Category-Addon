@@ -1,7 +1,7 @@
 === Page Builder Widgets ===
 Contributors: agreem2016
 Tags: elementor addon, woocommerce product categories, widget, page builder, images
-Tested up to: 6.9.1
+Tested up to: 6.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
