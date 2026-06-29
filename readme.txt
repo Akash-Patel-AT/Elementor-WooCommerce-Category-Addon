@@ -1,51 +1,75 @@
-=== Page Builder Widgets ===
+=== Advanced Custom CSS for Elementor ===
 Contributors: agreem2016
-Tags: elementor addon, woocommerce product categories, widget, page builder, images
+Tags: elementor, custom css, ACCE, responsive design, frontend editor
+Requires at least: 7.0
 Tested up to: 6.9
-Stable tag: 1.0.0
+Stable tag: 1.0
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Page Builder Widgets for Elementor.
+Advanced Custom CSS for Elementor.
 
 == Description ==
-A custom Elementor widget to display WooCommerce product categories with their images, names, and permalinks. This plugin provides a flexible and customizable way to showcase WooCommerce product categories on your website.
+Advanced Custom CSS for Elementor (ACCE) adds a dedicated Custom CSS section to the **Advanced** tab of every Elementor widget.  
+It lets you write clean, widget-scoped CSS using the `selector` keyword and provides separate fields for **Desktop**, **Tablet**, and **Mobile** styling.
+
+No premium version required — works with both Elementor Free and Elementor Pro.
+
+Perfect for users and developers who need fast, responsive CSS control directly inside the Elementor editor.
 
 == Features ==
-- Display WooCommerce product categories dynamically.
-- Show category images, names, and links to the category pages.
-- Fully customizable through Elementor's interface.
-- Supports multiple category selection.
-- Supports sorting
+- Adds a **Custom CSS panel** to all Elementor widgets.
+- Separate CSS fields for **Desktop**, **Tablet**, and **Mobile**.
+- Supports the `selector` keyword for precise widget-only CSS.
+- Uses Elementor's live preview for instant visual updates.
+- Breakpoints can be customized with a simple filter.
+- Lightweight, fast, and requires no additional settings.
 
 == Installation ==
-1. **Download the Plugin:**
-   Download the plugin files and extract them.
-
-2. **Upload to WordPress:**
-   - Go to your WordPress Admin Dashboard.
-   - Navigate to `Plugins > Add New`.
-   - Click `Upload Plugin` and select the plugin ZIP file.
-   - Install and activate the plugin.
-
-3. **Use in Elementor:**
-   - Open any page with Elementor.
-   - Search for the "PBW Product Categories" widget in the Elementor panel.
-   - Drag and drop it onto your page.
+1. Upload the plugin folder to `/wp-content/plugins/`.
+2. Activate the plugin through the **Plugins** screen in WordPress.
+3. Open Elementor, select any widget, and go to **Advanced > ACCE Custom CSS**.
 
 == Usage ==
-1. Drag the **PBW Product Categories** widget onto your Elementor page.
-2. Configure the following options:
-   - **Heading Tag:** Select heading tag h1 to h6 for title. 
-   - **Title:** Add a title to display above the categories.
-   - **Description:** Add a short description below the title.
-   - **Show Product Count:** Show/Hide product count
-   - **Hide Empty Categories:** Choose if you want to hide categories that doesn't have any product assigned.
-   - **Order By:** Sort listing by Title, Date & Menu Order.
-   - **Select Categories:** Choose the WooCommerce categories you want to display.
-3. Style the widget using Elementor's styling options.
+In Elementor editor:
+
+1. Select any widget.
+2. Open the **Advanced** tab.
+3. Scroll down to **ACCE Custom CSS**.
+4. Add your CSS using the `selector` keyword.
+
+Example:
+
+selector {
+    background: #f3f3f3;
+    border-radius: 8px;
+}
+
+== Developer Notes ==
+You can override the default breakpoints (Tablet: 768px, Mobile: 425px) using this filter:
+
+add_filter('ACCE_custom_css_breakpoints', function($defaults) {
+    return [
+        'tablet' => 900,
+        'mobile' => 600,
+    ];
+});
+
+== Frequently Asked Questions ==
+= Does it work with Elementor Pro? =
+Yes, it works with both Elementor Free and Elementor Pro.
+
+= Does it support live preview? =
+Yes. CSS updates appear instantly in Elementor’s visual editor.
+
+== License ==
+This plugin is licensed under the GPLv2 or later.
 
 == Changelog ==
+= 1.0 =
+Initial release with device-based CSS fields and breakpoint customization.
 
-= 0.1 =
-Initial release.
+== Upgrade Notice ==
+= 1.0 =
+First release — adds responsive Custom CSS controls to Elementor widgets.
