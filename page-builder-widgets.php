@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Page Builder Widgets
  * Description:       Adds custom Elementor widgets for displaying WooCommerce product categories with images and links.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.3
  * Requires PHP:      7.4
  * Author:            Agreem Technologies
